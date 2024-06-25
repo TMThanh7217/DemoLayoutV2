@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- sample layout for testing -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imagePlace"
+        android:layout_width="193dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="76dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="304dp"
+        android:text="Country"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="76dp"
+        android:text="Place name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addressText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="156dp"
+        android:text="str. x, district z, city y"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="182dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="304dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.597"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
+        android:padding="5dp"
+        android:text="Detail description
+        \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat sed lectus. Etiam non quam lacus suspendisse. Duis convallis convallis tellus id interdum velit laoreet id. In egestas erat imperdiet sed euismod nisi porta. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Posuere urna nec tincidunt praesent. Magna fermentum iaculis eu non diam phasellus vestibulum. Magna fermentum iaculis eu non diam phasellus. Hac habitasse platea dictumst quisque sagittis purus sit amet. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. Mi eget mauris pharetra et ultrices neque. Libero enim sed faucibus turpis in eu. Semper risus in hendrerit gravida rutrum quisque non tellus. Orci sagittis eu volutpat odio facilisis mauris sit amet.
+        \n\nLectus mauris ultrices eros in. Nunc consequat interdum varius sit amet mattis vulputate enim. Orci eu lobortis elementum nibh tellus molestie nunc. Adipiscing enim eu turpis egestas pretium aenean. Dictum non consectetur a erat nam at. Ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit ut aliquam purus. Cras sed felis eget velit aliquet sagittis id consectetur. Purus semper eget duis at tellus at urna. Quis hendrerit dolor magna eget est lorem ipsum dolor sit.
+        "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
