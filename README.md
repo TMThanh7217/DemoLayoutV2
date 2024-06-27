@@ -2,4 +2,4 @@
 
 This demo is an updated version of DemoLayout
 
-The demo can switch between layout by ultilizing Fragment
+The demo can switch between layout by utilizing Fragment
