@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">DemoLayoutV2</string>
+    <string name="app_name">DemoLayout</string>
+    <string name="homepage">Homepage</string>
+    <string name="linear_layout">LinearLayout</string>
+    <string name="grid_view">GridView</string>
+    <string name="table_layout">TableLayout</string>
+    <string name="frame_layout">FrameLayout</string>
+    <string name="list_view">ListView</string>
+    <string name="absolute_layout">AbsoluteLayout</string>
+    <string name="relative_layout">RelativeLayout</string>
+    <string name="constraint_layout">ConstraintLayout</string>
+    <string name="button1">Button 1</string>
+    <string name="button2">Button 2</string>
+    <string name="button3">Button 3</string>
+    <string name="open_nav">Open Navigation</string>
+    <string name="close_nav">Close Navigation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

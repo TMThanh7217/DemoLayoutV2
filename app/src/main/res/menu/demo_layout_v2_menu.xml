@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/new_game"
-        android:title="new_game"/>
-    <item android:id="@+id/help"
-        android:title="help" />
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+        <group
+            android:checkableBehavior="single">
+                <item android:id="@+id/nav_home"
+                    android:title="@string/homepage" />
+
+                <item android:id="@+id/absolute_layout"
+                    android:title="@string/absolute_layout" />
+                <item android:id="@+id/relative_layout"
+                    android:title="@string/relative_layout" />
+                <item android:id="@+id/constraint_layout"
+                    android:title="@string/constraint_layout" />
+
+                <item android:id="@+id/linear_layout"
+                    android:title="@string/linear_layout" />
+                <item android:id="@+id/frame_layout"
+                    android:title="@string/frame_layout" />
+
+                <item android:id="@+id/grid_view"
+                    android:title="@string/grid_view" />
+                <item android:id="@+id/list_view"
+                    android:title="@string/list_view" />
+
+                <item android:id="@+id/table_layout"
+                    android:title="@string/table_layout" />
+        </group>
 </menu>
