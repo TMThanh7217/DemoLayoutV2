@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">DemoLayoutV2</string>
     <string name="homepage">Homepage</string>
+    <string name="homepage_fragment">HomepageFragment</string>
+    <string name="homepage_fragment_welcome">Welcome to DemoLayoutV2</string>
+    <string name="homepage_fragment_desc">Click on the menu button to see the layout list</string>
     <string name="linear_layout">LinearLayout</string>
     <string name="grid_view">GridView</string>
     <string name="table_layout">TableLayout</string>
@@ -9,9 +12,31 @@
     <string name="absolute_layout">AbsoluteLayout</string>
     <string name="relative_layout">RelativeLayout</string>
     <string name="constraint_layout">ConstraintLayout</string>
+    <string name="views_component_demo">ViewsComponentDemo</string>
+    <string name="views_component_demo_2">ViewsComponentDemo2</string>
+
     <string name="button1">Button 1</string>
     <string name="button2">Button 2</string>
     <string name="button3">Button 3</string>
     <string name="open_nav">Open Navigation</string>
     <string name="close_nav">Close Navigation</string>
+    <string name="radio_btn_1">Radio button 1</string>
+    <string name="radio_btn_2">Radio button 2</string>
+    <string name="radio_btn_3">Radio button 3</string>
+    <string name="radio_btn_4">Radio button 4</string>
+    <string name="radio_btn_5">Radio button 5</string>
+    <string name="checkbox_1">checkbox 1</string>
+    <string name="checkbox_2">checkbox 2</string>
+    <string name="checkbox_3">checkbox 3</string>
+    <string name="checkbox_4">checkbox 4</string>
+    <string name="checkbox_5">checkbox 5</string>
+    <string name="cost_of_service">Cost of Service</string>
+    <string name="how_was_the_service">How was the service?</string>
+    <string name="amazing_service">Amazing (20%)</string>
+    <string name="good_service">Good (18%)</string>
+    <string name="ok_service">Okay (15%)</string>
+    <string name="round_up_tip">Round up tip?</string>
+    <string name="calculate">Calculate</string>
+    <string name="tip_amount">Tip Amount</string>
+    <string name="total">Total</string>
 </resources>

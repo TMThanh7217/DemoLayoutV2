@@ -77,6 +77,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 .replace(R.id.fragment_container, ListViewFragment()).commit()
             R.id.table_layout -> supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, TableLayoutFragment()).commit()
+
+            // uhhhh, inconsistent naming but oh well
+            // sure hope this doesn't bite me later x D
+            R.id.views_component_demo -> supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ComponentsDemoFragment()).commit()
+            R.id.views_component_demo_2 -> supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ComponentsDemo2Fragment()).commit()
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
