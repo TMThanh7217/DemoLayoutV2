@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import org.w3c.dom.Text
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,10 +18,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [RelativeLayoutFragment.newInstance] factory method to
+ * Use the [ConstraintLayoutFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class RelativeLayoutFragment : Fragment() {
+class ConstraintLayoutFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -38,21 +39,21 @@ class RelativeLayoutFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val rootView = inflater.inflate(R.layout.fragment_relative_layout, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_constraint_layout, container, false)
 
-        val submitBtn = rootView.findViewById<Button>(R.id.submitBtn)
-        submitBtn.setOnClickListener {
-            val firstName = rootView.findViewById<EditText>(R.id.firstName)
-            val lastName = rootView.findViewById<EditText>(R.id.lastName)
-            val guestUserText = rootView.findViewById<TextView>(R.id.guestUserText)
+        val signInBtn = rootView.findViewById<Button>(R.id.signInBtn)
+        signInBtn.setOnClickListener {
+            val email = rootView.findViewById<EditText>(R.id.emailEdit)
+            val password = rootView.findViewById<EditText>(R.id.passwordEdit)
+            val emailDisplay = rootView.findViewById<TextView>(R.id.emailTextView)
 
-            val text = "${firstName.text} ${lastName.text}"
+            val text = "${email.text} ${password.text}"
             val duration = Toast.LENGTH_SHORT
             val toast = Toast.makeText(requireContext(), text, duration).show()
 
-            // Check null
-            if (firstName.text.isNotEmpty() || lastName.text.isNotEmpty())
-                guestUserText.text = text
+            // Check no input value case
+            if (email.text.isNotEmpty() && password.text.isNotEmpty())
+                emailDisplay.text = email.text
         }
 
         return rootView
@@ -65,12 +66,12 @@ class RelativeLayoutFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment RelativeLayoutFragment.
+         * @return A new instance of fragment ConstraintLayoutFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            RelativeLayoutFragment().apply {
+            ConstraintLayoutFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

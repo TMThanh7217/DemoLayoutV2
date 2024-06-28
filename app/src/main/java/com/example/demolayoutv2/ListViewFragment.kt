@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.ListView
 import android.widget.Toast
 
 // TODO: Rename parameter arguments, choose names that match
@@ -17,10 +17,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [RelativeLayoutFragment.newInstance] factory method to
+ * Use the [ListViewFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class RelativeLayoutFragment : Fragment() {
+class ListViewFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -38,21 +38,30 @@ class RelativeLayoutFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val rootView = inflater.inflate(R.layout.fragment_relative_layout, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_list_view, container, false)
 
-        val submitBtn = rootView.findViewById<Button>(R.id.submitBtn)
-        submitBtn.setOnClickListener {
-            val firstName = rootView.findViewById<EditText>(R.id.firstName)
-            val lastName = rootView.findViewById<EditText>(R.id.lastName)
-            val guestUserText = rootView.findViewById<TextView>(R.id.guestUserText)
+        val arrayAdapter: ArrayAdapter<*>
+        val myOsValue = arrayOf(
+            "Android", "iPhone", "WindowsMobile",
+            "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
+            "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
+            "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
+            "Android", "iPhone", "WindowsMobile"
+        )
 
-            val text = "${firstName.text} ${lastName.text}"
+        // access the listView from xml file
+        var listViewDemo = rootView.findViewById<ListView>(R.id.listViewDemo)
+        arrayAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, myOsValue)
+        listViewDemo.adapter = arrayAdapter
+
+        listViewDemo.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
+            // Handle item click here
+            val selectedItem = arrayAdapter.getItem(position)
+            // Perform actions based on the selected item
+
+            val text = selectedItem.toString()
             val duration = Toast.LENGTH_SHORT
             val toast = Toast.makeText(requireContext(), text, duration).show()
-
-            // Check null
-            if (firstName.text.isNotEmpty() || lastName.text.isNotEmpty())
-                guestUserText.text = text
         }
 
         return rootView
@@ -65,12 +74,12 @@ class RelativeLayoutFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment RelativeLayoutFragment.
+         * @return A new instance of fragment ListViewFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            RelativeLayoutFragment().apply {
+            ListViewFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

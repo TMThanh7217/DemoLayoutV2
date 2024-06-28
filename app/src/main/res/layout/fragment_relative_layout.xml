@@ -17,18 +17,19 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/guestUserText"
         android:layout_alignParentLeft="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="85dp"
         android:text="First name:"
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/firstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"
+        android:layout_below="@+id/guestUserText"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="70dp"
         android:layout_toRightOf="@id/textView1"
         android:elegantTextHeight="true"
         android:hint="Enter First Name"
@@ -45,11 +46,13 @@
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/lastName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText1"
+        android:layout_below="@+id/firstName"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
         android:layout_toRightOf="@id/textView1"
         android:elegantTextHeight="true"
         android:hint="Enter Last Name"
@@ -63,5 +66,26 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Submit" />
+
+    <TextView
+        android:id="@+id/guestUserText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Guest user"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:text="Welcome"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
